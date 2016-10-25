@@ -1,5 +1,9 @@
 var input = prompt("Enter a word:");
 var array = input.split('');
+array = array.filter(function(str) {
+    return /\S/.test(str);
+});
+alert(array);
 
 if (array.length % 2 === 0){
   var iterations = array.length / 2;
