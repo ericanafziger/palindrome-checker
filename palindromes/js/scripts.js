@@ -1,8 +1,12 @@
 var input = prompt("Enter a word:");
+input = input.toLowerCase();
+input = input.replace(/[^a-zA-Z0-9 ]/g, "");
 var array = input.split('');
 array = array.filter(function(str) {
     return /\S/.test(str);
 });
+
+
 alert(array);
 
 if (array.length % 2 === 0){
